@@ -1,0 +1,74 @@
+<!--Rock Paper Scissors Folder - HTML-->
+<!--This project is the classic "Rock, Paper, Scissors" game.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Rock Paper Scissors Game</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!--Links the styles.css page-->
+		
+	</head>
+	<!--Tab Title-->
+
+	<body>
+	 <header>
+	 	<h1>Rock Paper Scissors</h1>
+	 </header>
+	 <!--Title in the header-->
+
+	 <div class="score-board">
+	 	<div id="user-label" class="badge">user</div>
+	 	<div id="computer-label" class="badge">comp</div>
+	 	<span id="user-score">0 </span>:<span id="computer-score"> 0</span>
+	 </div>
+	 <!--Scoreboard with results-->
+
+	 <div class="result">
+	 	<p>Click On Your Choice Below:</p>
+	 </div>
+	 <!--Message displaying game results-->
+
+	 <div class="choices">
+	 	<div class="choice" id="rock">
+	 		<img src="images/rock.jpg" alt="Rock">
+	 	</div>
+	 	<div class="choice" id="paper">
+	 		<img src="images/paper.jpg" alt="Paper">
+	 	</div>
+	 	<div class="choice" id="scissors">
+	 		<img src="images/scissors.jpg" alt="Scissors">
+	 	</div>
+	 </div>
+	 <!--Images for the rock, paper, scissors choices-->
+
+	 <p id="action-message">Make your move...</p>
+	 <!--Simple action message-->
+
+	 <div class="background-image">
+	 	<img src="images/RockPaperScissorsBack.jpg" alt="Fireplace">
+		 <div class="fireplace" id="fire1">
+		 	<img src="images/fire1.jpg" alt="fire1">
+		 </div> 
+		 <div class="fireplace" id="fire2">
+		 	<img src="images/fire2.jpg" alt="fire2">
+		 </div>
+		 <div class="fireplace" id="fire3">
+		 	<img src="images/fire3.jpg" alt="fire3">
+		 </div> 
+		 <div class="fireplace" id="fire4">
+		 	<img src="images/fire4.jpg" alt="fire4">
+		 </div>
+		 <div class="fireplace" id="fire5">
+		 	<img src="images/fire5.jpg" alt="fire5">
+		 </div>
+	</div>
+	<!--Background fireplace image along with hidden fire
+		images for a simple animation-->
+
+	 <script src="app.js" charset="utf-8"></script>
+	 <!--Links the app.js page-->
+
+	</body>
+</html>

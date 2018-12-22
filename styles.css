@@ -1,0 +1,221 @@
+/*Rock Paper Scissors Folder - CSS
+This project is the classic "Rock, Paper, Scissors" game.*/
+
+@import url('https://fonts.googleapis.com/css?family=Aleo');
+/*Imports a special font from Google - We can also use the "linking"
+  reference in the HTML head as another option*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*Use asterisks to be "universal" or to cover everything*/
+
+body {
+	background-color: rgb(44,28,10,100%);
+}
+/*This sets the dark color of the background*/
+
+header {
+	background: tan;
+	padding: 10px;
+}
+/*Sets up the title header with tan background*/
+
+header > h1 {
+	color:  rgb(220, 50, 50);
+	text-align: center;
+	font-weight: bold;
+	text-decoration: underline;
+	font-family: 'Aleo', serif;
+}
+/*This uses the "header > h1" to specifically target
+  this h1 to style this title header.  It also uses the
+  imported "Aleo" font.*/
+
+.score-board {
+	margin: 12px auto;
+	border: 3px double green;
+	border-radius: 4px;
+	text-align: center;
+	width: 200px;
+	color: rgb(220, 220, 100);
+	font-size: 40px;
+	padding: 15px 20px;
+	font-family: 'Aleo', serif;
+	position: relative;
+}
+/*This sets up the scoreboard. The 
+  "border-radius" is used to round the corners.
+  The "position: relative" is used in prep for
+  floating the user label & comp label on top.
+  We are also using the imported "Aleo" font again.*/
+
+.badge {
+	background: tan;
+	color: rgb(220, 50, 50);
+	font-size: 14px;
+	padding: 2px 10px;
+	font-family: 'Aleo', serif;
+}
+/*This sets up the labels for the user & the comp.
+  We are also using the imported "Aleo" font again.*/
+
+#user-label {
+	position: absolute;
+	top: 30px;
+	left: -25px;
+}
+/*We use "position: absolute" on the "position: relative" 
+  scoreboard for positioning precisely on top of it.*/
+
+#computer-label {
+	position: absolute;
+	top: 30px;
+	right: -30px;
+}
+/*We use "position: absolute" on the "position: relative" 
+  scoreboard for positioning precisely on top of it.*/
+
+.result {
+	font-size: 40px;
+	color: rgb(220, 220, 100);
+}
+/*This sets up the background for the game results.*/
+
+.result > p {
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Aleo', serif;
+}
+/*This ".result > p" sets up the font for the "p" area 
+  of the "results" specifically.  We are also 
+  using the imported "Aleo" font again.*/
+
+.choices {
+	margin-top: 20px;
+	text-align: center;
+	box-sizing: border-box;
+}
+/*This sets up the "background box" for the 
+  choices images.  "Box-sizing: border-box" 
+  keeps the "box" the same size with all of the 
+  borders, padding, etc.*/
+
+.choice {
+	border: 4px solid red;
+	border-radius: 50%;
+	margin: 0 20px;
+	padding: 10px;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+/*This sets up the game choices images & their 
+  background.  "Border-radius: 50%" makes a 
+  perfect circle.  "Display: inline-block" 
+  aligns the images horizontally vs. the 
+  default of "block" which aligns the images 
+  vertically. "Transition: all 0.3s ease" is used 
+  for the timing & transition of the "hover" below.*/
+
+.choice:hover {
+	cursor: pointer;
+	background: #770000;
+}
+/*This converts the icon to a pointer when  
+  hovering over a game choice using the 
+  "transition" above.*/
+
+#action-message {
+	text-align: center;
+	color: rgb(220, 220, 100);
+	font-family: 'Aleo', serif;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/*This styles the action message.*/
+
+.green-glow {
+	border: 7px solid #4dcc7a;
+	border-radius: 50%;
+	box-shadow:  0 0 8px #31b43a;
+}
+
+.red-glow {
+	border: 7px solid #fc121b;
+	border-radius: 50%;
+	box-shadow: 0 0 8px #d81115;
+}
+
+.gray-glow {
+	border: 7px solid #aaaaaa;
+	border-radius: 50%;
+	box-shadow: 0 0 8px #888888;
+}
+/*The "glows" above activates after the 
+  user clicks on one of the choice & then 
+  shows the resulting glow - green, red, gray.*/
+
+.background-image {
+	height: 300px;
+	width: 100%;
+	background-size: auto;
+	background-repeat: no-repeat;
+	text-align: center;
+	z-index: 0;
+	position: relative;
+}
+/*This sets up the main fireplace image in the 
+  background.  The "position: relative" is used in prep for
+  floating the various "fires" animation & "z-index" sets 
+  this image at the bottom of the layers.*/
+
+#fire1 {
+	position: relative;
+	top: -250px;
+	margin: 0 auto;
+	z-index: 1;
+	visibility: hidden;
+}
+
+#fire2 {
+	position: relative;
+	top: -304px;
+	margin: 0 auto;
+	z-index: 2;
+	visibility: hidden;
+}
+
+#fire3 {
+	position: relative;
+	top: -358px;
+	margin: 0 auto;
+	z-index: 3;
+	visibility: hidden;
+}
+
+#fire4 {
+	position: relative;
+	top: -412px;
+	margin: 0 auto;
+	z-index: 4;
+	visibility: hidden;
+}
+
+#fire5 {
+	position: relative;
+	top: -467px;
+	margin: 0 auto;
+	z-index: 5;
+	visibility: hidden;
+}
+/*These set up the animated "fires" images on top 
+  of the background image.  The "position: relative" 
+  are used to position the various "fires" 
+  images & "z-index" sets these images on top 
+  of the main background image.  Note that we 
+  used "relative" for resizing screens for various 
+  devices.*/
